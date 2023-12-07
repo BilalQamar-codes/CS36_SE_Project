@@ -137,7 +137,7 @@
             this.btnSignUp.Depth = 0;
             this.btnSignUp.HighEmphasis = true;
             this.btnSignUp.Icon = null;
-            this.btnSignUp.Location = new System.Drawing.Point(172, 276);
+            this.btnSignUp.Location = new System.Drawing.Point(185, 276);
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSignUp.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnSignUp.Name = "btnSignUp";
@@ -148,6 +148,7 @@
             this.btnSignUp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSignUp.UseAccentColor = false;
             this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // SignUp
             // 
