@@ -55,6 +55,35 @@ namespace SchoolManagementSystem.DL
                 connection.Close();
             }
         }
+        public static bool LoginUser(string email, string password)
+        {
+            // Open a connection to the database
+            SqlConnection connection = DbConnection.getInstance().getConnection();
+            
+
+            // Create and execute the SQL SELECT statement
+            using (SqlCommand command = new SqlCommand("SELECT * FROM users WHERE email = @email AND password = @password", connection))
+            {
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@password", password);
+                SqlDataReader reader = command.ExecuteReader();
+
+                // Check if any user is found
+                if (reader.HasRows)
+                {
+                    // Login successful
+                    reader.Close();
+                    return true;
+                }
+                else
+                {
+                    // Login failed
+                    reader.Close();
+                    return false;
+                }
+            }
+        }
+
 
 
     }

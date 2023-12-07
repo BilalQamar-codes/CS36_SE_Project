@@ -81,6 +81,7 @@
             this.btnLogin.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLogin.UseAccentColor = false;
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
             // 
@@ -98,7 +99,7 @@
             this.txtPassword.Password = true;
             this.txtPassword.Size = new System.Drawing.Size(235, 50);
             this.txtPassword.TabIndex = 3;
-            this.txtPassword.Text = "";
+            this.txtPassword.Text = "Password";
             this.txtPassword.TrailingIcon = null;
             // 
             // label3

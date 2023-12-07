@@ -37,13 +37,20 @@ namespace SchoolManagementSystem
                 User user = new User(name, email, password, role, dt, dt, true);
                 UserDL.addUserIntoDatabase(user);
                 MessageBox.Show("Successfully Created Account", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-
+                clearControls();
+                
             }
             catch (Exception ex) 
             {
                 LogsDL.LogException(ex);
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        public void clearControls()
+        {
+            txtFullName.Text = "";
+            txtEmail.Text = "";
+            txtPassword.Text = "";
         }
     }
 }
