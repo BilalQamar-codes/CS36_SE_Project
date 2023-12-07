@@ -120,9 +120,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(115, 5);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 13);
+            this.label3.Size = new System.Drawing.Size(125, 13);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Don\'t Have and Account?";
+            this.label3.Text = "Don\'t Have an Account?";
             // 
             // panel1
             // 

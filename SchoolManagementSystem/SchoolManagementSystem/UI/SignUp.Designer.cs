@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSignUp = new MaterialSkin.Controls.MaterialButton();
+            this.txtPassword = new MaterialSkin.Controls.MaterialTextBox();
             this.txtEmail = new MaterialSkin.Controls.MaterialTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFullName = new MaterialSkin.Controls.MaterialTextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txtPassword = new MaterialSkin.Controls.MaterialTextBox();
-            this.btnSignUp = new MaterialSkin.Controls.MaterialButton();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,13 +52,52 @@
             this.panel2.Size = new System.Drawing.Size(473, 318);
             this.panel2.TabIndex = 2;
             // 
+            // btnSignUp
+            // 
+            this.btnSignUp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnSignUp.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnSignUp.Depth = 0;
+            this.btnSignUp.HighEmphasis = true;
+            this.btnSignUp.Icon = null;
+            this.btnSignUp.Location = new System.Drawing.Point(185, 276);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSignUp.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnSignUp.Size = new System.Drawing.Size(77, 36);
+            this.btnSignUp.TabIndex = 5;
+            this.btnSignUp.Text = "Sign Up";
+            this.btnSignUp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnSignUp.UseAccentColor = false;
+            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.AnimateReadOnly = false;
+            this.txtPassword.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Depth = 0;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPassword.LeadingIcon = null;
+            this.txtPassword.Location = new System.Drawing.Point(110, 204);
+            this.txtPassword.MaxLength = 50;
+            this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPassword.Multiline = false;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Password = true;
+            this.txtPassword.Size = new System.Drawing.Size(235, 50);
+            this.txtPassword.TabIndex = 4;
+            this.txtPassword.Text = "Password";
+            this.txtPassword.TrailingIcon = null;
+            // 
             // txtEmail
             // 
             this.txtEmail.AnimateReadOnly = false;
             this.txtEmail.BackColor = System.Drawing.SystemColors.HotTrack;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Depth = 0;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtEmail.LeadingIcon = null;
             this.txtEmail.Location = new System.Drawing.Point(110, 137);
             this.txtEmail.MaxLength = 50;
@@ -87,7 +126,7 @@
             this.txtFullName.BackColor = System.Drawing.SystemColors.HotTrack;
             this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFullName.Depth = 0;
-            this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtFullName.LeadingIcon = null;
             this.txtFullName.Location = new System.Drawing.Point(110, 71);
             this.txtFullName.MaxLength = 50;
@@ -111,44 +150,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(479, 324);
             this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.AnimateReadOnly = false;
-            this.txtPassword.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Depth = 0;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtPassword.LeadingIcon = null;
-            this.txtPassword.Location = new System.Drawing.Point(110, 204);
-            this.txtPassword.MaxLength = 50;
-            this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtPassword.Multiline = false;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(235, 50);
-            this.txtPassword.TabIndex = 4;
-            this.txtPassword.Text = "Password";
-            this.txtPassword.TrailingIcon = null;
-            // 
-            // btnSignUp
-            // 
-            this.btnSignUp.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSignUp.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnSignUp.Depth = 0;
-            this.btnSignUp.HighEmphasis = true;
-            this.btnSignUp.Icon = null;
-            this.btnSignUp.Location = new System.Drawing.Point(185, 276);
-            this.btnSignUp.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnSignUp.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnSignUp.Size = new System.Drawing.Size(77, 36);
-            this.btnSignUp.TabIndex = 5;
-            this.btnSignUp.Text = "Sign Up";
-            this.btnSignUp.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnSignUp.UseAccentColor = false;
-            this.btnSignUp.UseVisualStyleBackColor = true;
-            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // SignUp
             // 

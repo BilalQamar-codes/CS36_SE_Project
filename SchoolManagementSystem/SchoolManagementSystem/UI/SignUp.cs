@@ -1,4 +1,5 @@
 ﻿using SchoolManagementSystem.BL;
+using SchoolManagementSystem.DL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,12 +22,28 @@ namespace SchoolManagementSystem
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            string name = txtFullName.Text;
-            string email = txtEmail.Text;
-            string password = txtPassword.Text;
-            string role = "Admin";
-            DateTime dt = DateTime.Now;
-            User user = new User(name,email,password,role,dt,dt,true);
+            try
+            {
+                string name = txtFullName.Text;
+                string email = txtEmail.Text;
+                string password = txtPassword.Text;
+                string role = "Admin";
+                if (name == "" || password == "" || email == "")
+                {
+                    MessageBox.Show("Kindly Fill All the Fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                DateTime dt = DateTime.Now;
+                User user = new User(name, email, password, role, dt, dt, true);
+                UserDL.addUserIntoDatabase(user);
+                MessageBox.Show("Successfully Created Account", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+
+            }
+            catch (Exception ex) 
+            {
+                LogsDL.LogException(ex);
+            }
         }
     }
 }

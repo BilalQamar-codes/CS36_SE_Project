@@ -8,19 +8,25 @@ using System.Data.SqlClient;
 
 namespace SchoolManagementSystem.DL
 {
-    public class DbConnection
+    class DbConnection
     {
-        private SqlConnection connection;
-
-        public DbConnection()
+        String ConnectionStr = @"Data Source=(local);Initial Catalog=SchoolManagementSystem;Integrated Security=True";
+        SqlConnection con;
+        private static DbConnection _instance;
+        public static DbConnection getInstance()
         {
-            string connectionString = "Data Source=localhost;Initial Catalog=SchoolManagementSystem;Integrated Security=True";
-            connection = new SqlConnection(connectionString);
+            if (_instance == null)
+                _instance = new DbConnection();
+            return _instance;
         }
-
-        public SqlConnection GetConnection()
+        private DbConnection()
         {
-            return connection;
+            con = new SqlConnection(ConnectionStr);
+            con.Open();
+        }
+        public SqlConnection getConnection()
+        {
+            return con;
         }
     }
 }

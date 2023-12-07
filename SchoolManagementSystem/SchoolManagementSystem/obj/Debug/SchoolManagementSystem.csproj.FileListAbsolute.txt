@@ -13,3 +13,5 @@ E:\5th Semester\SE Lab\SE Project\SchoolManagementSystem\SchoolManagementSystem\
 E:\5th Semester\SE Lab\SE Project\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.csproj.CopyComplete
 E:\5th Semester\SE Lab\SE Project\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.UCSignUp.resources
 E:\5th Semester\SE Lab\SE Project\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.SignUp.resources
+E:\5th Semester\SE Lab\SE Project\SchoolManagementSystem\SchoolManagementSystem\bin\Debug\System.Data.SqlClient.dll
+E:\5th Semester\SE Lab\SE Project\SchoolManagementSystem\SchoolManagementSystem\bin\Debug\System.Data.SqlClient.xml

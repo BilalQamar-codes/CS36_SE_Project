@@ -45,14 +45,14 @@ namespace SchoolManagementSystem
             {
                 signUp1.BringToFront();
                 changePage.Text = "Login-Here";
-                label3.Text = "Aready Have and Account?";
+                label3.Text = "Aready Have an Account?";
                 
             }
             else if(changePage.Text == "Login-Here")
             {
                 ucSignUp1.BringToFront();
                 changePage.Text = "Sign-Up Here";
-                label3.Text = "Don't Have and Account?";
+                label3.Text = "Don't Have an Account?";
                 
             }
         }
