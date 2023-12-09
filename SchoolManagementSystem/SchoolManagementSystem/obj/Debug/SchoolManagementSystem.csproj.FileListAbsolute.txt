@@ -16,3 +16,4 @@ E:\5th Semester\SE Lab\SE Project\SchoolManagementSystem\SchoolManagementSystem\
 E:\5th Semester\SE Lab\SE Project\SchoolManagementSystem\SchoolManagementSystem\bin\Debug\System.Data.SqlClient.dll
 E:\5th Semester\SE Lab\SE Project\SchoolManagementSystem\SchoolManagementSystem\bin\Debug\System.Data.SqlClient.xml
 E:\5th Semester\SE Lab\SE Project\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.UI.AdminHome.resources
+E:\5th Semester\SE Lab\SE Project\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.UI.AddNewTeacher.resources

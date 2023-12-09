@@ -29,5 +29,25 @@ namespace SchoolManagementSystem.UI
         {
 
         }
+        public void stylingDatagridviews()
+        {
+            TeachersGV.BorderStyle = BorderStyle.None;
+            TeachersGV.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            TeachersGV.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            TeachersGV.DefaultCellStyle.SelectionBackColor = Color.FromArgb(33, 150, 243);
+            TeachersGV.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            TeachersGV.BackgroundColor = Color.White;
+
+            TeachersGV.EnableHeadersVisualStyles = false;
+            TeachersGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            TeachersGV.ColumnHeadersDefaultCellStyle.BackColor = Color.DeepSkyBlue;
+            TeachersGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            AddNewTeacher ant = new AddNewTeacher();
+            ant.ShowDialog();
+        }
     }
 }
