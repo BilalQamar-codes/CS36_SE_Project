@@ -10,7 +10,7 @@ namespace SchoolManagementSystem.DL
 {
     class DBConnection
     {
-        string ConnectionStr = @"Data Source=(local);Initial Catalog=SchoolManagementSystem;Integrated Security=True";
+        public static string ConnectionStr = @"Data Source=(local);Initial Catalog=SchoolManagementSystem;Integrated Security=True";
         SqlConnection con;
         private static DBConnection _instance;
         public static DBConnection getInstance()

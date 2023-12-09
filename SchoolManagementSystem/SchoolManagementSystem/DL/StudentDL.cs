@@ -61,7 +61,7 @@ namespace SchoolManagementSystem.DL
         public static DataTable getAllStudents()
         {
 
-            string ConnectionStr = @"Data Source=(local);Initial Catalog=SchoolManagementSystem;Integrated Security=True";
+            string ConnectionStr = DBConnection.ConnectionStr;
             SqlConnection connection = new SqlConnection(ConnectionStr);
 
             connection.Open();

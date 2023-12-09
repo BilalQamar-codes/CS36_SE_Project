@@ -14,7 +14,8 @@ namespace SchoolManagementSystem.DL
     {
         public static void addTeacherIntoDatabase(Teacher teacher)
         {
-            SqlConnection connection = DBConnection.getInstance().getConnection();
+            string ConnectionStr = DBConnection.ConnectionStr;
+            SqlConnection connection = new SqlConnection(ConnectionStr);
 
             // Connect to the database.
             connection.Open();
@@ -53,11 +54,9 @@ namespace SchoolManagementSystem.DL
         }
         public static DataTable getAllTeachers()
         {
-            
 
-                SqlConnection connection = DBConnection.getInstance().getConnection();
-                
-            connection.Open();
+            string ConnectionStr = DBConnection.ConnectionStr;
+            SqlConnection connection = new SqlConnection(ConnectionStr);
 
             try
             {
