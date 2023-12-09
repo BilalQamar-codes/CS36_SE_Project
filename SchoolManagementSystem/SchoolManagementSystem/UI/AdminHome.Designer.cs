@@ -49,6 +49,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.UsersGV = new System.Windows.Forms.DataGridView();
+            this.Students = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.StudentsGV = new System.Windows.Forms.DataGridView();
+            this.btnNewStudent = new MaterialSkin.Controls.MaterialButton();
             this.materialTabControl1.SuspendLayout();
             this.Home.SuspendLayout();
             this.Teachers.SuspendLayout();
@@ -61,6 +67,10 @@
             this.tableLayoutPanel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsersGV)).BeginInit();
+            this.Students.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentsGV)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -68,6 +78,7 @@
             this.materialTabControl1.Controls.Add(this.Home);
             this.materialTabControl1.Controls.Add(this.Teachers);
             this.materialTabControl1.Controls.Add(this.Users);
+            this.materialTabControl1.Controls.Add(this.Students);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.ImageList = this.imageList1;
@@ -197,8 +208,8 @@
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.18182F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.81818F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.50649F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.49351F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(810, 385);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
@@ -209,17 +220,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(804, 64);
+            this.panel1.Size = new System.Drawing.Size(804, 46);
             this.panel1.TabIndex = 0;
             // 
             // materialButton1
             // 
+            this.materialButton1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.materialButton1.Depth = 0;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(513, 15);
+            this.materialButton1.Location = new System.Drawing.Point(668, 5);
             this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
@@ -237,7 +249,7 @@
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(29, 25);
+            this.materialLabel1.Location = new System.Drawing.Point(20, 16);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(124, 19);
@@ -246,11 +258,12 @@
             // 
             // TeachersGV
             // 
+            this.TeachersGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TeachersGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TeachersGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TeachersGV.Location = new System.Drawing.Point(3, 73);
+            this.TeachersGV.Location = new System.Drawing.Point(3, 55);
             this.TeachersGV.Name = "TeachersGV";
-            this.TeachersGV.Size = new System.Drawing.Size(804, 309);
+            this.TeachersGV.Size = new System.Drawing.Size(804, 327);
             this.TeachersGV.TabIndex = 1;
             // 
             // Users
@@ -274,8 +287,8 @@
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.18182F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.81818F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.29923F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.70077F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(816, 391);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
@@ -285,7 +298,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(810, 65);
+            this.panel2.Size = new System.Drawing.Size(810, 46);
             this.panel2.TabIndex = 0;
             // 
             // materialLabel2
@@ -293,7 +306,7 @@
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(29, 25);
+            this.materialLabel2.Location = new System.Drawing.Point(21, 14);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(98, 19);
@@ -302,12 +315,91 @@
             // 
             // UsersGV
             // 
+            this.UsersGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.UsersGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UsersGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UsersGV.Location = new System.Drawing.Point(3, 74);
+            this.UsersGV.Location = new System.Drawing.Point(3, 55);
             this.UsersGV.Name = "UsersGV";
-            this.UsersGV.Size = new System.Drawing.Size(810, 314);
+            this.UsersGV.Size = new System.Drawing.Size(810, 333);
             this.UsersGV.TabIndex = 1;
+            // 
+            // Students
+            // 
+            this.Students.Controls.Add(this.tableLayoutPanel5);
+            this.Students.Location = new System.Drawing.Point(4, 23);
+            this.Students.Name = "Students";
+            this.Students.Size = new System.Drawing.Size(816, 391);
+            this.Students.TabIndex = 3;
+            this.Students.Text = "Students";
+            this.Students.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.panel3, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.StudentsGV, 0, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.0665F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.9335F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(816, 391);
+            this.tableLayoutPanel5.TabIndex = 2;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnNewStudent);
+            this.panel3.Controls.Add(this.materialLabel3);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(810, 49);
+            this.panel3.TabIndex = 0;
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel3.Location = new System.Drawing.Point(21, 17);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(122, 19);
+            this.materialLabel3.TabIndex = 1;
+            this.materialLabel3.Text = "Home > Students";
+            // 
+            // StudentsGV
+            // 
+            this.StudentsGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.StudentsGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StudentsGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StudentsGV.Location = new System.Drawing.Point(3, 58);
+            this.StudentsGV.Name = "StudentsGV";
+            this.StudentsGV.Size = new System.Drawing.Size(810, 330);
+            this.StudentsGV.TabIndex = 1;
+            // 
+            // btnNewStudent
+            // 
+            this.btnNewStudent.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnNewStudent.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNewStudent.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnNewStudent.Depth = 0;
+            this.btnNewStudent.HighEmphasis = true;
+            this.btnNewStudent.Icon = null;
+            this.btnNewStudent.Location = new System.Drawing.Point(674, 7);
+            this.btnNewStudent.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnNewStudent.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnNewStudent.Name = "btnNewStudent";
+            this.btnNewStudent.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnNewStudent.Size = new System.Drawing.Size(122, 36);
+            this.btnNewStudent.TabIndex = 2;
+            this.btnNewStudent.Text = "New Student";
+            this.btnNewStudent.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnNewStudent.UseAccentColor = false;
+            this.btnNewStudent.UseVisualStyleBackColor = true;
+            this.btnNewStudent.Click += new System.EventHandler(this.btnNewStudent_Click);
             // 
             // AdminHome
             // 
@@ -334,6 +426,11 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UsersGV)).EndInit();
+            this.Students.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentsGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -359,5 +456,11 @@
         private System.Windows.Forms.Panel panel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private System.Windows.Forms.DataGridView UsersGV;
+        private System.Windows.Forms.TabPage Students;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Panel panel3;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private System.Windows.Forms.DataGridView StudentsGV;
+        private MaterialSkin.Controls.MaterialButton btnNewStudent;
     }
 }

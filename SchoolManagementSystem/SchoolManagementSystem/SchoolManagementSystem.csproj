@@ -53,12 +53,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\Student.cs" />
     <Compile Include="BL\Teacher.cs" />
     <Compile Include="BL\User.cs" />
     <Compile Include="DL\DbConnection.cs" />
     <Compile Include="DL\LogsDL.cs" />
+    <Compile Include="DL\StudentDL.cs" />
     <Compile Include="DL\TeacherDL.cs" />
     <Compile Include="DL\UserDL.cs" />
+    <Compile Include="UI\AddNewStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddNewStudent.Designer.cs">
+      <DependentUpon>AddNewStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\AddNewTeacher.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +99,9 @@
     <Compile Include="UI\UCSignUp.Designer.cs">
       <DependentUpon>UCSignUp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\AddNewStudent.resx">
+      <DependentUpon>AddNewStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\AddNewTeacher.resx">
       <DependentUpon>AddNewTeacher.cs</DependentUpon>
     </EmbeddedResource>

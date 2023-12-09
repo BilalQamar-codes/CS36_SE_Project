@@ -53,26 +53,22 @@ namespace SchoolManagementSystem.DL
         }
         public static DataTable getAllTeachers()
         {
-            List<Teacher> teachers = new List<Teacher>();
-
-            SqlConnection connection = DbConnection.getInstance().getConnection();
             
+
+                SqlConnection connection = DbConnection.getInstance().getConnection();
+                
             connection.Open();
 
             try
             {
-
-
-                // Execute SQL SELECT statement
-                
+                // Execute SQL SELECT statement                
                 SqlCommand cmd = new SqlCommand("Select * from teachers;", connection);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+                connection.Close();
                 return dt;
-                
-
-
+               
                 // Close connection and reader
 
             }
@@ -80,10 +76,8 @@ namespace SchoolManagementSystem.DL
             {
                 connection.Close();
             }
-
             
         }
-
 
     }
 }

@@ -108,8 +108,7 @@ namespace SchoolManagementSystem.DL
         }
         public static DataTable getAllUserss()
         {
-            List<Teacher> teachers = new List<Teacher>();
-
+            
             SqlConnection connection = DbConnection.getInstance().getConnection();
 
             connection.Open();
@@ -124,6 +123,7 @@ namespace SchoolManagementSystem.DL
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
+                connection.Close();
                 return dt;
 
 

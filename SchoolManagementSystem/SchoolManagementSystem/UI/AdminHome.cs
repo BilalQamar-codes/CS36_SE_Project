@@ -30,7 +30,9 @@ namespace SchoolManagementSystem.UI
         private void AdminHome_Load(object sender, EventArgs e)
         {
             stylingDatagridviews();
-            bindData();
+            bindTeachersData();
+            bindStudentsData();
+            bindUsersData();
         }
         public void stylingDatagridviews()
         {
@@ -59,29 +61,57 @@ namespace SchoolManagementSystem.UI
             UsersGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             UsersGV.ColumnHeadersDefaultCellStyle.BackColor = Color.DeepSkyBlue;
             UsersGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+
+
+
+            StudentsGV.BorderStyle = BorderStyle.None;
+            StudentsGV.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            StudentsGV.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            StudentsGV.DefaultCellStyle.SelectionBackColor = Color.FromArgb(33, 150, 243);
+            StudentsGV.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            StudentsGV.BackgroundColor = Color.White;
+
+            StudentsGV.EnableHeadersVisualStyles = false;
+            StudentsGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            StudentsGV.ColumnHeadersDefaultCellStyle.BackColor = Color.DeepSkyBlue;
+            StudentsGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
             AddNewTeacher ant = new AddNewTeacher();
             ant.ShowDialog();
-            bindData();
+            bindTeachersData();
 
         }
-        public void bindData()
+        public void bindStudentsData()
+        {          
+            StudentsGV.DataSource = StudentDL.getAllStudents();
+            StudentsGV.Columns["student_id"].Visible = false;
+
+        }
+        public void bindTeachersData()
         {
             TeachersGV.DataSource = TeacherDL.getAllTeachers();
             TeachersGV.Columns["user_id"].Visible = false;
             TeachersGV.Columns["teacher_id"].Visible = false;
             TeachersGV.Columns["first_name"].HeaderText = "First Name";
             TeachersGV.Columns["last_name"].HeaderText = "Last Name";
-
-
+           
+        }
+        public void bindUsersData()
+        {          
             UsersGV.DataSource = UserDL.getAllUserss();
             UsersGV.Columns["user_id"].Visible = false;
-            
-            
+           
+        }
 
+        private void btnNewStudent_Click(object sender, EventArgs e)
+        {
+            AddNewStudent ans = new AddNewStudent();
+            ans.ShowDialog();
+            bindStudentsData();
         }
     }
 }
