@@ -90,6 +90,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Depth = 0;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPassword.Hint = "Password";
             this.txtPassword.LeadingIcon = null;
             this.txtPassword.Location = new System.Drawing.Point(110, 165);
             this.txtPassword.MaxLength = 50;
@@ -99,7 +100,7 @@
             this.txtPassword.Password = true;
             this.txtPassword.Size = new System.Drawing.Size(235, 50);
             this.txtPassword.TabIndex = 3;
-            this.txtPassword.Text = "Password";
+            this.txtPassword.Text = "";
             this.txtPassword.TrailingIcon = null;
             // 
             // label3
@@ -120,6 +121,7 @@
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Depth = 0;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtEmail.Hint = "Email";
             this.txtEmail.LeadingIcon = null;
             this.txtEmail.Location = new System.Drawing.Point(110, 99);
             this.txtEmail.MaxLength = 50;
@@ -128,7 +130,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(235, 50);
             this.txtEmail.TabIndex = 0;
-            this.txtEmail.Text = "Email";
+            this.txtEmail.Text = "";
             this.txtEmail.TrailingIcon = null;
             // 
             // UCSignUp

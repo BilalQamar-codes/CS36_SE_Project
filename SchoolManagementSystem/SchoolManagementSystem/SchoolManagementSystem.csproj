@@ -53,9 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\Teacher.cs" />
     <Compile Include="BL\User.cs" />
     <Compile Include="DL\DbConnection.cs" />
     <Compile Include="DL\LogsDL.cs" />
+    <Compile Include="DL\TeacherDL.cs" />
     <Compile Include="DL\UserDL.cs" />
     <Compile Include="UI\AddNewTeacher.cs">
       <SubType>Form</SubType>

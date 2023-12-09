@@ -14,12 +14,14 @@ namespace SchoolManagementSystem.DL
 {
     public  class UserDL
     {
-        public static void addUserIntoDatabase(User user)
+        public static int addUserIntoDatabase(User user)
         {
             SqlConnection connection = DbConnection.getInstance().getConnection();
 
             // Connect to the database.
             connection.Open();
+
+            int newUserId = 0;
 
             try
             {
@@ -36,7 +38,7 @@ namespace SchoolManagementSystem.DL
                 }
 
                 // Continue with the insertion if the email is unique.
-                using (SqlCommand command = new SqlCommand(@"INSERT INTO users (username, email, password, role, CreatedAt, UpdatedAt, Active) VALUES (@username, @email, @password, @role, @createdAt, @updatedAt, @active)", connection))
+                using (SqlCommand command = new SqlCommand(@"INSERT INTO users (username, email, password, role, CreatedAt, UpdatedAt, Active) VALUES (@username, @email, @password, @role, @createdAt, @updatedAt, @active); SELECT SCOPE_IDENTITY();", connection))
                 {
                     command.Parameters.AddWithValue("@username", user.Username);
                     command.Parameters.AddWithValue("@email", user.Email);
@@ -45,20 +47,39 @@ namespace SchoolManagementSystem.DL
                     command.Parameters.AddWithValue("@createdAt", user.CreatedAt);
                     command.Parameters.AddWithValue("@updatedAt", user.UpdatedAt);
                     command.Parameters.AddWithValue("@active", user.Active);
-
                     command.ExecuteNonQuery();
+                    // Get the generated user ID using SCOPE_IDENTITY
                 }
+                using (SqlCommand command = new SqlCommand("SELECT MAX(User_Id) FROM users", connection))
+                {
+                    object maxIdObject = command.ExecuteScalar();
+
+                    if (maxIdObject != null)
+                    {
+                        newUserId = (int)maxIdObject;
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                connection.Close();
+                LogsDL.LogException(ex);
+                throw new Exception("Error Adding User in Database"+ex.Message );
             }
             finally
             {
                 // Always close the connection.
                 connection.Close();
             }
+
+            return newUserId;
         }
+
         public static bool LoginUser(string email, string password)
         {
             // Open a connection to the database
             SqlConnection connection = DbConnection.getInstance().getConnection();
+            connection.Open();
             
 
             // Create and execute the SQL SELECT statement
@@ -73,12 +94,14 @@ namespace SchoolManagementSystem.DL
                 {
                     // Login successful
                     reader.Close();
+                    connection.Close();
                     return true;
                 }
                 else
                 {
                     // Login failed
                     reader.Close();
+                    connection.Close(); 
                     return false;
                 }
             }

@@ -79,6 +79,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Depth = 0;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtPassword.Hint = "Password";
             this.txtPassword.LeadingIcon = null;
             this.txtPassword.Location = new System.Drawing.Point(110, 204);
             this.txtPassword.MaxLength = 50;
@@ -88,7 +89,7 @@
             this.txtPassword.Password = true;
             this.txtPassword.Size = new System.Drawing.Size(235, 50);
             this.txtPassword.TabIndex = 4;
-            this.txtPassword.Text = "Password";
+            this.txtPassword.Text = "";
             this.txtPassword.TrailingIcon = null;
             // 
             // txtEmail
@@ -98,6 +99,7 @@
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Depth = 0;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtEmail.Hint = "Email";
             this.txtEmail.LeadingIcon = null;
             this.txtEmail.Location = new System.Drawing.Point(110, 137);
             this.txtEmail.MaxLength = 50;
@@ -106,7 +108,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(235, 50);
             this.txtEmail.TabIndex = 3;
-            this.txtEmail.Text = "Email";
+            this.txtEmail.Text = "";
             this.txtEmail.TrailingIcon = null;
             // 
             // label3
@@ -127,6 +129,7 @@
             this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFullName.Depth = 0;
             this.txtFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtFullName.Hint = "Full Name";
             this.txtFullName.LeadingIcon = null;
             this.txtFullName.Location = new System.Drawing.Point(110, 71);
             this.txtFullName.MaxLength = 50;
@@ -135,7 +138,7 @@
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(235, 50);
             this.txtFullName.TabIndex = 0;
-            this.txtFullName.Text = "Full Name";
+            this.txtFullName.Text = "";
             this.txtFullName.TrailingIcon = null;
             // 
             // tableLayoutPanel1

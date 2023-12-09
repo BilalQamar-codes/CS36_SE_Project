@@ -22,7 +22,7 @@ namespace SchoolManagementSystem.DL
         private DbConnection()
         {
             con = new SqlConnection(ConnectionStr);
-            con.Open();
+            
         }
         public SqlConnection getConnection()
         {

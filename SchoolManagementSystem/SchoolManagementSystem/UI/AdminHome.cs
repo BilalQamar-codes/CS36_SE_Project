@@ -10,6 +10,8 @@ using MaterialSkin.Controls;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SchoolManagementSystem.DL;
+using System.Data.SqlClient;
 
 namespace SchoolManagementSystem.UI
 {
@@ -27,7 +29,8 @@ namespace SchoolManagementSystem.UI
 
         private void AdminHome_Load(object sender, EventArgs e)
         {
-
+            stylingDatagridviews();
+            bindData();
         }
         public void stylingDatagridviews()
         {
@@ -48,6 +51,17 @@ namespace SchoolManagementSystem.UI
         {
             AddNewTeacher ant = new AddNewTeacher();
             ant.ShowDialog();
+            bindData();
+
+        }
+        public void bindData()
+        {
+            TeachersGV.DataSource = TeacherDL.getAllTeachers();
+            TeachersGV.Columns["user_id"].Visible = false;
+            TeachersGV.Columns["teacher_id"].Visible = false;
+            TeachersGV.Columns["first_name"].HeaderText = "First Name";
+            TeachersGV.Columns["last_name"].HeaderText = "Last Name";
+
         }
     }
 }

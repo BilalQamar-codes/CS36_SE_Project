@@ -21,6 +21,9 @@ namespace SchoolManagementSystem.DL
 
             // Open a connection to the database
             SqlConnection connection = DbConnection.getInstance().getConnection();
+            connection.Open();
+            
+            
             
 
             // Create and execute the SQL INSERT statement

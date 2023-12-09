@@ -80,7 +80,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnSave.Size = new System.Drawing.Size(64, 36);
-            this.btnSave.TabIndex = 17;
+            this.btnSave.TabIndex = 10;
             this.btnSave.Text = "Save";
             this.btnSave.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnSave.UseAccentColor = false;
@@ -221,8 +221,9 @@
             this.txtPassword.MouseState = MaterialSkin.MouseState.OUT;
             this.txtPassword.Multiline = false;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Password = true;
             this.txtPassword.Size = new System.Drawing.Size(297, 50);
-            this.txtPassword.TabIndex = 26;
+            this.txtPassword.TabIndex = 9;
             this.txtPassword.Text = "";
             this.txtPassword.TrailingIcon = null;
             // 
