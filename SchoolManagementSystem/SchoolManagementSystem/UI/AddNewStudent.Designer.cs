@@ -225,6 +225,7 @@
             this.Controls.Add(this.txtLName);
             this.Controls.Add(this.txtFName);
             this.Name = "AddNewStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add New Student";
             this.Load += new System.EventHandler(this.AddNewStudent_Load);
             this.ResumeLayout(false);

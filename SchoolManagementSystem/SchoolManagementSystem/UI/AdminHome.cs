@@ -36,6 +36,7 @@ namespace SchoolManagementSystem.UI
             bindTeachersData();
             bindStudentsData();
             bindUsersData();
+            bindCoursesData();
         }
         public void stylingDatagridviews()
         {
@@ -79,6 +80,19 @@ namespace SchoolManagementSystem.UI
             StudentsGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             StudentsGV.ColumnHeadersDefaultCellStyle.BackColor = Color.DeepSkyBlue;
             StudentsGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+
+            CoursesGV.BorderStyle = BorderStyle.None;
+            CoursesGV.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            CoursesGV.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            CoursesGV.DefaultCellStyle.SelectionBackColor = Color.FromArgb(33, 150, 243);
+            CoursesGV.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            CoursesGV.BackgroundColor = Color.White;
+
+            CoursesGV.EnableHeadersVisualStyles = false;
+            CoursesGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            CoursesGV.ColumnHeadersDefaultCellStyle.BackColor = Color.DeepSkyBlue;
+            StudentsGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
@@ -103,6 +117,13 @@ namespace SchoolManagementSystem.UI
             TeachersGV.Columns["last_name"].HeaderText = "Last Name";
            
         }
+        public void bindCoursesData()
+        {
+            CoursesGV.DataSource = CoursesDL.getAllCourses();
+            CoursesGV.Columns["course_id"].Visible = false;
+            
+            
+        }
         public void bindUsersData()
         {          
             UsersGV.DataSource = UserDL.getAllUserss();
@@ -116,6 +137,13 @@ namespace SchoolManagementSystem.UI
             ans.ShowDialog();
             bindStudentsData();
          
+        }
+
+        private void materialButton2_Click(object sender, EventArgs e)
+        {
+            AddNewCourse anc = new AddNewCourse();
+            anc.ShowDialog();
+            bindCoursesData();
         }
     }
 }

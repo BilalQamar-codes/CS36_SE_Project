@@ -95,7 +95,7 @@
             this.txtLName.Depth = 0;
             this.txtLName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtLName.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtLName.Hint = "Enter Last Name Name";
+            this.txtLName.Hint = "Enter Last Name";
             this.txtLName.LeadingIcon = null;
             this.txtLName.Location = new System.Drawing.Point(433, 83);
             this.txtLName.MaxLength = 50;
