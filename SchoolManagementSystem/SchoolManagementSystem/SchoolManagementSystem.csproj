@@ -57,6 +57,12 @@
     <Compile Include="DL\DbConnection.cs" />
     <Compile Include="DL\LogsDL.cs" />
     <Compile Include="DL\UserDL.cs" />
+    <Compile Include="UI\AdminHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AdminHome.Designer.cs">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="UI\UCSignUp.Designer.cs">
       <DependentUpon>UCSignUp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\AdminHome.resx">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
