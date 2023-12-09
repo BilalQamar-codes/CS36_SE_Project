@@ -1,4 +1,5 @@
 ﻿using SchoolManagementSystem.DL;
+using SchoolManagementSystem.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -34,6 +35,7 @@ namespace SchoolManagementSystem
                 if(UserDL.LoginUser(email, password)) 
                 {
                     MessageBox.Show("Login Successfull", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
                     
                 }
             }

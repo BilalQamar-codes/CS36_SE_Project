@@ -106,6 +106,38 @@ namespace SchoolManagementSystem.DL
                 }
             }
         }
+        public static DataTable getAllUserss()
+        {
+            List<Teacher> teachers = new List<Teacher>();
+
+            SqlConnection connection = DbConnection.getInstance().getConnection();
+
+            connection.Open();
+
+            try
+            {
+
+
+                // Execute SQL SELECT statement
+
+                SqlCommand cmd = new SqlCommand("Select * from users;", connection);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+
+
+
+                // Close connection and reader
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+        }
 
 
 

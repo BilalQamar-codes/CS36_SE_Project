@@ -44,6 +44,11 @@
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.TeachersGV = new System.Windows.Forms.DataGridView();
+            this.Users = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.UsersGV = new System.Windows.Forms.DataGridView();
             this.materialTabControl1.SuspendLayout();
             this.Home.SuspendLayout();
             this.Teachers.SuspendLayout();
@@ -52,12 +57,17 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeachersGV)).BeginInit();
+            this.Users.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UsersGV)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
             // 
             this.materialTabControl1.Controls.Add(this.Home);
             this.materialTabControl1.Controls.Add(this.Teachers);
+            this.materialTabControl1.Controls.Add(this.Users);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.ImageList = this.imageList1;
@@ -72,7 +82,7 @@
             // Home
             // 
             this.Home.Controls.Add(this.tableLayoutPanel1);
-            this.Home.ImageIndex = 1;
+            this.Home.ImageKey = "icons8-home-32.png";
             this.Home.Location = new System.Drawing.Point(4, 23);
             this.Home.Name = "Home";
             this.Home.Padding = new System.Windows.Forms.Padding(3);
@@ -84,7 +94,7 @@
             // Teachers
             // 
             this.Teachers.Controls.Add(this.tableLayoutPanel3);
-            this.Teachers.ImageKey = "icons8-home-32.png";
+            this.Teachers.ImageKey = "icons8-people-32.png";
             this.Teachers.Location = new System.Drawing.Point(4, 23);
             this.Teachers.Name = "Teachers";
             this.Teachers.Padding = new System.Windows.Forms.Padding(3);
@@ -243,6 +253,62 @@
             this.TeachersGV.Size = new System.Drawing.Size(804, 309);
             this.TeachersGV.TabIndex = 1;
             // 
+            // Users
+            // 
+            this.Users.Controls.Add(this.tableLayoutPanel4);
+            this.Users.ImageKey = "icons8-edit-account-48.png";
+            this.Users.Location = new System.Drawing.Point(4, 23);
+            this.Users.Name = "Users";
+            this.Users.Size = new System.Drawing.Size(816, 391);
+            this.Users.TabIndex = 2;
+            this.Users.Text = "Users";
+            this.Users.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.panel2, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.UsersGV, 0, 1);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.18182F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.81818F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(816, 391);
+            this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.materialLabel2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(810, 65);
+            this.panel2.TabIndex = 0;
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Location = new System.Drawing.Point(29, 25);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(98, 19);
+            this.materialLabel2.TabIndex = 1;
+            this.materialLabel2.Text = "Home > Users";
+            // 
+            // UsersGV
+            // 
+            this.UsersGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UsersGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UsersGV.Location = new System.Drawing.Point(3, 74);
+            this.UsersGV.Name = "UsersGV";
+            this.UsersGV.Size = new System.Drawing.Size(810, 314);
+            this.UsersGV.TabIndex = 1;
+            // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,7 +318,7 @@
             this.DrawerTabControl = this.materialTabControl1;
             this.Name = "AdminHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminHome";
+            this.Text = "Admin Home";
             this.Load += new System.EventHandler(this.AdminHome_Load);
             this.materialTabControl1.ResumeLayout(false);
             this.Home.ResumeLayout(false);
@@ -263,6 +329,11 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TeachersGV)).EndInit();
+            this.Users.ResumeLayout(false);
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UsersGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -283,5 +354,10 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private System.Windows.Forms.DataGridView TeachersGV;
+        private System.Windows.Forms.TabPage Users;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Panel panel2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private System.Windows.Forms.DataGridView UsersGV;
     }
 }

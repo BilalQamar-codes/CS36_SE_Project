@@ -45,6 +45,20 @@ namespace SchoolManagementSystem.UI
             TeachersGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             TeachersGV.ColumnHeadersDefaultCellStyle.BackColor = Color.DeepSkyBlue;
             TeachersGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+
+
+            UsersGV.BorderStyle = BorderStyle.None;
+            UsersGV.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            UsersGV.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            UsersGV.DefaultCellStyle.SelectionBackColor = Color.FromArgb(33, 150, 243);
+            UsersGV.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            UsersGV.BackgroundColor = Color.White;
+
+            UsersGV.EnableHeadersVisualStyles = false;
+            UsersGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            UsersGV.ColumnHeadersDefaultCellStyle.BackColor = Color.DeepSkyBlue;
+            UsersGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
@@ -61,6 +75,12 @@ namespace SchoolManagementSystem.UI
             TeachersGV.Columns["teacher_id"].Visible = false;
             TeachersGV.Columns["first_name"].HeaderText = "First Name";
             TeachersGV.Columns["last_name"].HeaderText = "Last Name";
+
+
+            UsersGV.DataSource = UserDL.getAllUserss();
+            UsersGV.Columns["user_id"].Visible = false;
+            
+            
 
         }
     }
