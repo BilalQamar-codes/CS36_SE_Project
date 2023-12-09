@@ -16,7 +16,7 @@ namespace SchoolManagementSystem.DL
             bool success = false;
 
             // Open connection to the database
-            using (var connection = DbConnection.getInstance().getConnection())
+            using (var connection = DBConnection.getInstance().getConnection())
             {
                 connection.Open();
 
@@ -60,9 +60,9 @@ namespace SchoolManagementSystem.DL
         }
         public static DataTable getAllStudents()
         {
-            
 
-            SqlConnection connection = DbConnection.getInstance().getConnection();
+            string ConnectionStr = @"Data Source=(local);Initial Catalog=SchoolManagementSystem;Integrated Security=True";
+            SqlConnection connection = new SqlConnection(ConnectionStr);
 
             connection.Open();
 

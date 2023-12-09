@@ -56,7 +56,7 @@
     <Compile Include="BL\Student.cs" />
     <Compile Include="BL\Teacher.cs" />
     <Compile Include="BL\User.cs" />
-    <Compile Include="DL\DbConnection.cs" />
+    <Compile Include="DL\DBConnection.cs" />
     <Compile Include="DL\LogsDL.cs" />
     <Compile Include="DL\StudentDL.cs" />
     <Compile Include="DL\TeacherDL.cs" />

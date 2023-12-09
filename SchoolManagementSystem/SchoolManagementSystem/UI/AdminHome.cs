@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Data;
+using System.Data.SqlClient;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
@@ -12,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SchoolManagementSystem.DL;
 using System.Data.SqlClient;
+using System.Data.Common;
 
 namespace SchoolManagementSystem.UI
 {
@@ -112,6 +115,7 @@ namespace SchoolManagementSystem.UI
             AddNewStudent ans = new AddNewStudent();
             ans.ShowDialog();
             bindStudentsData();
+         
         }
     }
 }

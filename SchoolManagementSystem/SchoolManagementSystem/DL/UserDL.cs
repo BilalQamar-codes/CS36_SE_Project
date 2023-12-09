@@ -16,8 +16,8 @@ namespace SchoolManagementSystem.DL
     {
         public static int addUserIntoDatabase(User user)
         {
-            SqlConnection connection = DbConnection.getInstance().getConnection();
-
+            string ConnectionStr = DBConnection.ConnectionStr;
+            SqlConnection connection = new SqlConnection(ConnectionStr);
             // Connect to the database.
             connection.Open();
 
@@ -78,7 +78,8 @@ namespace SchoolManagementSystem.DL
         public static bool LoginUser(string email, string password)
         {
             // Open a connection to the database
-            SqlConnection connection = DbConnection.getInstance().getConnection();
+            string ConnectionStr = DBConnection.ConnectionStr;
+            SqlConnection connection = new SqlConnection(ConnectionStr);
             connection.Open();
             
 
@@ -108,26 +109,19 @@ namespace SchoolManagementSystem.DL
         }
         public static DataTable getAllUserss()
         {
-            
-            SqlConnection connection = DbConnection.getInstance().getConnection();
 
-            connection.Open();
+            string ConnectionStr = DBConnection.ConnectionStr;
+            SqlConnection connection = new SqlConnection(ConnectionStr);
 
             try
             {
-
-
                 // Execute SQL SELECT statement
-
                 SqlCommand cmd = new SqlCommand("Select * from users;", connection);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 connection.Close();
                 return dt;
-
-
-
                 // Close connection and reader
 
             }

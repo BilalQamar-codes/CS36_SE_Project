@@ -14,7 +14,7 @@ namespace SchoolManagementSystem.DL
     {
         public static void addTeacherIntoDatabase(Teacher teacher)
         {
-            SqlConnection connection = DbConnection.getInstance().getConnection();
+            SqlConnection connection = DBConnection.getInstance().getConnection();
 
             // Connect to the database.
             connection.Open();
@@ -55,7 +55,7 @@ namespace SchoolManagementSystem.DL
         {
             
 
-                SqlConnection connection = DbConnection.getInstance().getConnection();
+                SqlConnection connection = DBConnection.getInstance().getConnection();
                 
             connection.Open();
 
