@@ -32,6 +32,7 @@
             this.txtCourseName = new MaterialSkin.Controls.MaterialTextBox();
             this.txtCourseDescription = new MaterialSkin.Controls.MaterialMultiLineTextBox2();
             this.btnSave = new MaterialSkin.Controls.MaterialButton();
+            this.cmbClass = new MaterialSkin.Controls.MaterialComboBox();
             this.SuspendLayout();
             // 
             // cmbTeacher
@@ -49,7 +50,7 @@
             this.cmbTeacher.Hint = "Select Course Teacher";
             this.cmbTeacher.IntegralHeight = false;
             this.cmbTeacher.ItemHeight = 43;
-            this.cmbTeacher.Location = new System.Drawing.Point(28, 287);
+            this.cmbTeacher.Location = new System.Drawing.Point(28, 297);
             this.cmbTeacher.MaxDropDownItems = 4;
             this.cmbTeacher.MouseState = MaterialSkin.MouseState.OUT;
             this.cmbTeacher.Name = "cmbTeacher";
@@ -67,7 +68,7 @@
             this.txtCourseName.ForeColor = System.Drawing.SystemColors.Window;
             this.txtCourseName.Hint = "Enter Course Name";
             this.txtCourseName.LeadingIcon = null;
-            this.txtCourseName.Location = new System.Drawing.Point(28, 101);
+            this.txtCourseName.Location = new System.Drawing.Point(28, 83);
             this.txtCourseName.MaxLength = 50;
             this.txtCourseName.MouseState = MaterialSkin.MouseState.OUT;
             this.txtCourseName.Multiline = false;
@@ -86,7 +87,7 @@
             this.txtCourseDescription.Depth = 0;
             this.txtCourseDescription.HideSelection = true;
             this.txtCourseDescription.Hint = "Enter Cousre Description";
-            this.txtCourseDescription.Location = new System.Drawing.Point(28, 171);
+            this.txtCourseDescription.Location = new System.Drawing.Point(28, 146);
             this.txtCourseDescription.MaxLength = 32767;
             this.txtCourseDescription.MouseState = MaterialSkin.MouseState.OUT;
             this.txtCourseDescription.Name = "txtCourseDescription";
@@ -97,7 +98,7 @@
             this.txtCourseDescription.SelectionLength = 0;
             this.txtCourseDescription.SelectionStart = 0;
             this.txtCourseDescription.ShortcutsEnabled = true;
-            this.txtCourseDescription.Size = new System.Drawing.Size(297, 100);
+            this.txtCourseDescription.Size = new System.Drawing.Size(297, 75);
             this.txtCourseDescription.TabIndex = 9;
             this.txtCourseDescription.TabStop = false;
             this.txtCourseDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -123,11 +124,35 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // cmbClass
+            // 
+            this.cmbClass.AutoResize = false;
+            this.cmbClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cmbClass.Depth = 0;
+            this.cmbClass.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cmbClass.DropDownHeight = 174;
+            this.cmbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbClass.DropDownWidth = 121;
+            this.cmbClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbClass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cmbClass.FormattingEnabled = true;
+            this.cmbClass.Hint = "Select Class";
+            this.cmbClass.IntegralHeight = false;
+            this.cmbClass.ItemHeight = 43;
+            this.cmbClass.Location = new System.Drawing.Point(28, 232);
+            this.cmbClass.MaxDropDownItems = 4;
+            this.cmbClass.MouseState = MaterialSkin.MouseState.OUT;
+            this.cmbClass.Name = "cmbClass";
+            this.cmbClass.Size = new System.Drawing.Size(297, 49);
+            this.cmbClass.StartIndex = 0;
+            this.cmbClass.TabIndex = 11;
+            // 
             // AddNewCourse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(352, 423);
+            this.Controls.Add(this.cmbClass);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtCourseDescription);
             this.Controls.Add(this.cmbTeacher);
@@ -147,5 +172,6 @@
         private MaterialSkin.Controls.MaterialTextBox txtCourseName;
         private MaterialSkin.Controls.MaterialMultiLineTextBox2 txtCourseDescription;
         public MaterialSkin.Controls.MaterialButton btnSave;
+        public MaterialSkin.Controls.MaterialComboBox cmbClass;
     }
 }

@@ -85,6 +85,18 @@ namespace SchoolManagementSystem.DL
             }
 
         }
+        public static int getTotalStudents()
+        {
+            using (var connection = new SqlConnection(DBConnection.ConnectionStr))
+            {
+                connection.Open();
+
+                using (var command = new SqlCommand($"SELECT COUNT(*) FROM students", connection))
+                {
+                    return (int)command.ExecuteScalar();
+                }
+            }
+        }
 
     }
 }

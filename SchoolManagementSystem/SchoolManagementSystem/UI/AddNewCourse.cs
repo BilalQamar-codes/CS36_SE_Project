@@ -29,6 +29,7 @@ namespace SchoolManagementSystem.UI
         private void AddNewCourse_Load(object sender, EventArgs e)
         {
             loadTeachers();
+            loadClasses();
         }
         public void loadTeachers()
         {
@@ -57,22 +58,49 @@ namespace SchoolManagementSystem.UI
             
 
         }
+        public void loadClasses()
+        {
+            string ConnectionStr = DBConnection.ConnectionStr;
+            using (SqlConnection connection = new SqlConnection(ConnectionStr))
+            {
+                // Create the SQL command to select necessary data
+                string sql = "SELECT class_id , name AS Name FROM classess;";
+                try
+                {
+
+                    SqlCommand cmd = new SqlCommand(sql, connection);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    cmbTeacher.DataSource = dt;
+                    cmbTeacher.DisplayMember = "Name";
+                    cmbTeacher.ValueMember = "class_id";
+
+                }
+                catch (Exception z)
+                {
+                    MessageBox.Show(z.Message);
+                }
+            }
+
+
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
                 string CourseName = txtCourseName.Text;
-                string CourseDescription = txtCourseDescription.Text;
-                MessageBox.Show(cmbTeacher.SelectedValue.ToString());
+                string CourseDescription = txtCourseDescription.Text;                
                 int TeacherId = (int)cmbTeacher.SelectedValue;
+                int classId = (int)cmbClass.SelectedValue;
                 if (string.IsNullOrEmpty(CourseName) || string.IsNullOrEmpty(CourseDescription) ||
-                    TeacherId == 0)
+                    TeacherId == 0 || cmbClass.SelectedIndex == -1 || classId == 0)
                 {
                     MessageBox.Show("Kindly Fill All the Fields ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                Course newCourse = new Course(CourseName, CourseDescription,TeacherId, DateTime.Now, DateTime.Now,true);
+                Course newCourse = new Course(CourseName, CourseDescription,TeacherId, classId,DateTime.Now, DateTime.Now,true);
 
                 if(CoursesDL.AddCourseIntoDatabase(newCourse))
                 {

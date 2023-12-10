@@ -13,15 +13,17 @@ namespace SchoolManagementSystem.BL
         public string Name { get; set; }
         public string Description { get; set; }
         public int TeacherId { get; set; }
+        public int ClassId { get; set; }
         public DateTime? CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
         public bool Active { get; set; }
         
-        public Course(string name, string description, int teacherId, DateTime? createdAt, DateTime? updatedAt, bool active)
+        public Course(string name, string description, int teacherId,int classId, DateTime? createdAt, DateTime? updatedAt, bool active)
         {
             Name = name;
             Description = description;
             TeacherId = teacherId;
+            ClassId = classId;
             CreatedAt = createdAt;
             UpdatedAt = updatedAt;
             Active = active;

@@ -53,10 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\Class.cs" />
     <Compile Include="BL\Courses.cs" />
     <Compile Include="BL\Student.cs" />
     <Compile Include="BL\Teacher.cs" />
     <Compile Include="BL\User.cs" />
+    <Compile Include="DL\ClassDL.cs" />
     <Compile Include="DL\CoursesDL.cs" />
     <Compile Include="DL\DBConnection.cs" />
     <Compile Include="DL\LogsDL.cs" />

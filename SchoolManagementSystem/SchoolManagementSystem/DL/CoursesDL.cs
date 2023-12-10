@@ -24,13 +24,14 @@ namespace SchoolManagementSystem.DL
                 {
                     // Create command to insert the course data
                     var command = new SqlCommand(
-                        "INSERT INTO courses (name, description, teacher_id, CreatedAt, UpdatedAt, Active) " +
-                        "VALUES (@name, @description, @teacherId, @createdAt, @updatedAt, @active)", connection);
+                        "INSERT INTO courses (name, description, teacher_id,class_id, CreatedAt, UpdatedAt, Active) " +
+                        "VALUES (@name, @description, @teacherId,@classId, @createdAt, @updatedAt, @active)", connection);
 
                     // Add parameters for each course property
                     command.Parameters.AddWithValue("@name", course.Name);
                     command.Parameters.AddWithValue("@description", course.Description);
                     command.Parameters.AddWithValue("@teacherId", course.TeacherId);
+                    command.Parameters.AddWithValue("@classId", course.ClassId);
                     command.Parameters.AddWithValue("@createdAt", course.CreatedAt);
                     command.Parameters.AddWithValue("@updatedAt", course.UpdatedAt);
                     command.Parameters.AddWithValue("@active", course.Active);
