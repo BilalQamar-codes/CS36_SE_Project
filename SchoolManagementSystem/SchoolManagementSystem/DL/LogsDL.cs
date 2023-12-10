@@ -20,7 +20,7 @@ namespace SchoolManagementSystem.DL
             string stackTrace = exception.StackTrace;
 
             // Open a connection to the database
-            SqlConnection connection = DBConnection.getInstance().getConnection();
+            SqlConnection connection = new SqlConnection(DBConnection.ConnectionStr);
             connection.Open();
             
             

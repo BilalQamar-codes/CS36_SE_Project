@@ -37,6 +37,8 @@ namespace SchoolManagementSystem.UI
             bindStudentsData();
             bindUsersData();
             bindCoursesData();
+            bindClassesData();
+            loadDashboardValues();
         }
         public void stylingDatagridviews()
         {
@@ -93,6 +95,19 @@ namespace SchoolManagementSystem.UI
             CoursesGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             CoursesGV.ColumnHeadersDefaultCellStyle.BackColor = Color.DeepSkyBlue;
             StudentsGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+
+            ClassesGV.BorderStyle = BorderStyle.None;
+            ClassesGV.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            ClassesGV.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            ClassesGV.DefaultCellStyle.SelectionBackColor = Color.FromArgb(33, 150, 243);
+            ClassesGV.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            ClassesGV.BackgroundColor = Color.White;
+
+            ClassesGV.EnableHeadersVisualStyles = false;
+            ClassesGV.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            ClassesGV.ColumnHeadersDefaultCellStyle.BackColor = Color.DeepSkyBlue;
+            ClassesGV.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
@@ -108,6 +123,12 @@ namespace SchoolManagementSystem.UI
             StudentsGV.Columns["student_id"].Visible = false;
 
         }
+        public void bindClassesData()
+        {
+            ClassesGV.DataSource = ClassDL.getAllClasses();
+            ClassesGV.Columns["class_id"].Visible = false;
+
+        }
         public void bindTeachersData()
         {
             TeachersGV.DataSource = TeacherDL.getAllTeachers();
@@ -120,7 +141,7 @@ namespace SchoolManagementSystem.UI
         public void bindCoursesData()
         {
             CoursesGV.DataSource = CoursesDL.getAllCourses();
-            CoursesGV.Columns["course_id"].Visible = false;
+            //CoursesGV.Columns["course_id"].Visible = false;
             
             
         }
@@ -148,13 +169,21 @@ namespace SchoolManagementSystem.UI
 
         private void materialTabControl1_TabIndexChanged(object sender, EventArgs e)
         {
-
+            loadDashboardValues();
         }
         public void loadDashboardValues()
         {
             lblTeachers.Text = TeacherDL.getTotalTeachers().ToString();
             lblStudents.Text = StudentDL.getTotalStudents().ToString();
             lblClasses.Text = CoursesDL.getTotalCourses().ToString();
+        }
+
+        private void btnAddNewClass_Click(object sender, EventArgs e)
+        {
+            AddNewClass anc = new AddNewClass();
+            anc.ShowDialog();
+            bindClassesData();
+
         }
     }
 }

@@ -75,38 +75,57 @@ namespace SchoolManagementSystem.DL
             return newUserId;
         }
 
-        public static bool LoginUser(string email, string password)
+        public static User LoginUser(string email, string password)
         {
-            // Open a connection to the database
-            string ConnectionStr = DBConnection.ConnectionStr;
-            SqlConnection connection = new SqlConnection(ConnectionStr);
-            connection.Open();
-            
+            User user = null;
 
-            // Create and execute the SQL SELECT statement
-            using (SqlCommand command = new SqlCommand("SELECT * FROM users WHERE email = @email AND password = @password", connection))
+            try
             {
-                command.Parameters.AddWithValue("@email", email);
-                command.Parameters.AddWithValue("@password", password);
-                SqlDataReader reader = command.ExecuteReader();
+                // Open a connection to the database
+                string connectionString = DBConnection.ConnectionStr;
+                using (var connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
-                // Check if any user is found
-                if (reader.HasRows)
-                {
-                    // Login successful
-                    reader.Close();
-                    connection.Close();
-                    return true;
-                }
-                else
-                {
-                    // Login failed
-                    reader.Close();
-                    connection.Close(); 
-                    return false;
+                    // Create and execute the SQL SELECT statement
+                    using (var command = new SqlCommand("SELECT * FROM users WHERE email = @email AND password = @password", connection))
+                    {
+                        command.Parameters.AddWithValue("@email", email);
+                        command.Parameters.AddWithValue("@password", password);
+
+                        // Read the user data
+                        using (var reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                // Get user data from the first row
+                                while (reader.Read())
+                                {
+                                    user = new User();
+                                    user.UserId = reader.GetInt32(0);
+                                    user.Username = reader.GetString(1);
+                                    user.Email = reader.GetString(2);
+                                    user.Password = reader.GetString(3);
+                                    user.Role = reader.GetString(4);
+                                    user.CreatedAt = reader.GetDateTime(5);
+                                    user.UpdatedAt = reader.GetDateTime(6);
+                                    user.Active = reader.GetBoolean(7);
+                                    
+                                }
+                            }
+                        }
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                // Log the exception
+                Console.WriteLine("Error during login: " + ex.Message);
+            }
+
+            return user;
         }
+
         public static DataTable getAllUserss()
         {
 

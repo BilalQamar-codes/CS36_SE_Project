@@ -1,4 +1,5 @@
-﻿using SchoolManagementSystem.DL;
+﻿using SchoolManagementSystem.BL;
+using SchoolManagementSystem.DL;
 using SchoolManagementSystem.UI;
 using System;
 using System.Collections.Generic;
@@ -32,9 +33,23 @@ namespace SchoolManagementSystem
                     MessageBox.Show("Kindly Fill All the Fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if(UserDL.LoginUser(email, password)) 
+                else 
                 {
-                    MessageBox.Show("Login Successfull", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    User loggedInUser = UserDL.LoginUser(email, password);
+                    if(loggedInUser != null)
+                    {
+                        MessageBox.Show("Login Successfull as " + loggedInUser.Role, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if(loggedInUser.Role == "Admin")
+                        {
+                            AdminHome admin = new AdminHome();
+                            admin.ShowDialog();
+                        }
+                        else if(loggedInUser.Role == "Teacher")
+                        {
+                            TeacherHome teacher = new TeacherHome();
+                            teacher.ShowDialog();
+                        }
+                    }
                     
                     
                 }

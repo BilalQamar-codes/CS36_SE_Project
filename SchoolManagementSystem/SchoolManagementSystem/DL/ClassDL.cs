@@ -38,11 +38,11 @@ namespace SchoolManagementSystem.DL
             }
 
         }
-        public bool AddClassIntoDatabase(Class classObject)
+        public static bool AddClassIntoDatabase(Class classObject)
         {
             bool success = false;
 
-            using (var connection = DBConnection.getInstance().getConnection())
+            using (var connection = new SqlConnection(DBConnection.ConnectionStr))
             {
                 connection.Open();
 

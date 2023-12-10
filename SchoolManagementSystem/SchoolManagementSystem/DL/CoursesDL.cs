@@ -58,27 +58,45 @@ namespace SchoolManagementSystem.DL
         {
 
             string ConnectionStr = DBConnection.ConnectionStr;
-            SqlConnection connection = new SqlConnection(ConnectionStr);
-
-            connection.Open();
-
-            try
+            using (SqlConnection connection = new SqlConnection(ConnectionStr))
             {
-                // Execute SQL SELECT statement                
-                SqlCommand cmd = new SqlCommand("Select * from courses;", connection);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                connection.Close();
-                return dt;
+                // Open the connection
+                connection.Open();
 
-                // Close connection and reader
+                try
+                {
+                    // Execute SQL SELECT statement
+                    string sql = @"
+                                SELECT
+                                    c.course_id,
+                                    c.name AS course_name,
+                                    t.first_name + ' ' + t.last_name AS teacher_name,
+                                    c.description,
+                                    c.teacher_id,
+                                    c.created_at,
+                                    c.updated_at,
+                                    c.active
+                                FROM courses AS c
+                                INNER JOIN teachers AS t ON c.teacher_id = t.teacher_id;
+                                ";
+                    SqlCommand cmd = new SqlCommand(sql, connection);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
 
+                    // Close the connection
+                    connection.Close();
+
+                    return dt;
+                }
+                catch (Exception ex)
+                {
+                    // Handle exception
+                    Console.WriteLine("Error: " + ex.Message);
+                    return null;
+                }
             }
-            finally
-            {
-                connection.Close();
-            }
+
 
         }
         public static int getTotalCourses()

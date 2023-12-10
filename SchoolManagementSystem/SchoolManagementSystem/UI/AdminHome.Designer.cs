@@ -77,6 +77,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblClasses = new MaterialSkin.Controls.MaterialLabel();
             this.label1 = new System.Windows.Forms.Label();
+            this.Classes = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnAddNewClass = new MaterialSkin.Controls.MaterialButton();
+            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
+            this.ClassesGV = new System.Windows.Forms.DataGridView();
             this.materialTabControl1.SuspendLayout();
             this.Home.SuspendLayout();
             this.Teachers.SuspendLayout();
@@ -109,6 +115,10 @@
             this.tableLayoutPanel11.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.Classes.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ClassesGV)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -117,6 +127,7 @@
             this.materialTabControl1.Controls.Add(this.Teachers);
             this.materialTabControl1.Controls.Add(this.Users);
             this.materialTabControl1.Controls.Add(this.Students);
+            this.materialTabControl1.Controls.Add(this.Classes);
             this.materialTabControl1.Controls.Add(this.Courses);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -170,6 +181,7 @@
             this.imageList1.Images.SetKeyName(9, "icons8-evaluation-32.png");
             this.imageList1.Images.SetKeyName(10, "icons8-exam-32.png");
             this.imageList1.Images.SetKeyName(11, "icons8-user-50.png");
+            this.imageList1.Images.SetKeyName(12, "icons8-school-100.png");
             // 
             // tableLayoutPanel1
             // 
@@ -197,11 +209,12 @@
             this.tableLayoutPanel2.Controls.Add(this.materialCard2, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.materialCard1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.materialCard4, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 63);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(804, 130);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(804, 158);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -258,9 +271,9 @@
             this.materialLabel1.Location = new System.Drawing.Point(20, 16);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(124, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(222, 19);
             this.materialLabel1.TabIndex = 1;
-            this.materialLabel1.Text = "Home > Teachers";
+            this.materialLabel1.Text = "Home > Teachers Management";
             // 
             // TeachersGV
             // 
@@ -373,9 +386,9 @@
             this.materialLabel3.Location = new System.Drawing.Point(21, 17);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(122, 19);
+            this.materialLabel3.Size = new System.Drawing.Size(212, 19);
             this.materialLabel3.TabIndex = 1;
-            this.materialLabel3.Text = "Home > Students";
+            this.materialLabel3.Text = "Home > Student Management";
             // 
             // StudentsGV
             // 
@@ -473,9 +486,9 @@
             this.materialLabel4.Location = new System.Drawing.Point(21, 17);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(116, 19);
+            this.materialLabel4.Size = new System.Drawing.Size(214, 19);
             this.materialLabel4.TabIndex = 1;
-            this.materialLabel4.Text = "Home > Courses";
+            this.materialLabel4.Text = "Home > Courses Management";
             // 
             // CoursesGV
             // 
@@ -500,7 +513,7 @@
             this.materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard4.Name = "materialCard4";
             this.materialCard4.Padding = new System.Windows.Forms.Padding(10);
-            this.materialCard4.Size = new System.Drawing.Size(220, 110);
+            this.materialCard4.Size = new System.Drawing.Size(220, 120);
             this.materialCard4.TabIndex = 3;
             // 
             // tableLayoutPanel9
@@ -517,7 +530,7 @@
             this.tableLayoutPanel9.RowCount = 2;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.16667F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.83333F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(200, 90);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(200, 100);
             this.tableLayoutPanel9.TabIndex = 0;
             // 
             // materialLabel5
@@ -526,7 +539,7 @@
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.Location = new System.Drawing.Point(10, 8);
+            this.materialLabel5.Location = new System.Drawing.Point(10, 10);
             this.materialLabel5.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
@@ -542,11 +555,11 @@
             this.tableLayoutPanel10.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.lblTeachers, 1, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 38);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 42);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(194, 49);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(194, 55);
             this.tableLayoutPanel10.TabIndex = 2;
             // 
             // pictureBox1
@@ -556,7 +569,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 43);
+            this.pictureBox1.Size = new System.Drawing.Size(56, 49);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -567,7 +580,7 @@
             this.lblTeachers.AutoSize = true;
             this.lblTeachers.Depth = 0;
             this.lblTeachers.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblTeachers.Location = new System.Drawing.Point(67, 15);
+            this.lblTeachers.Location = new System.Drawing.Point(67, 18);
             this.lblTeachers.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
             this.lblTeachers.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTeachers.Name = "lblTeachers";
@@ -588,7 +601,7 @@
             this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard1.Name = "materialCard1";
             this.materialCard1.Padding = new System.Windows.Forms.Padding(10);
-            this.materialCard1.Size = new System.Drawing.Size(220, 110);
+            this.materialCard1.Size = new System.Drawing.Size(220, 120);
             this.materialCard1.TabIndex = 4;
             // 
             // tableLayoutPanel7
@@ -605,7 +618,7 @@
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.16667F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.83333F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(200, 90);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(200, 100);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // materialLabel6
@@ -614,7 +627,7 @@
             this.materialLabel6.AutoSize = true;
             this.materialLabel6.Depth = 0;
             this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(10, 8);
+            this.materialLabel6.Location = new System.Drawing.Point(10, 10);
             this.materialLabel6.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel6.Name = "materialLabel6";
@@ -630,11 +643,11 @@
             this.tableLayoutPanel8.Controls.Add(this.pictureBox2, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.lblStudents, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 38);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 42);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(194, 49);
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(194, 55);
             this.tableLayoutPanel8.TabIndex = 2;
             // 
             // pictureBox2
@@ -644,7 +657,7 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(3, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(56, 43);
+            this.pictureBox2.Size = new System.Drawing.Size(56, 49);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -655,7 +668,7 @@
             this.lblStudents.AutoSize = true;
             this.lblStudents.Depth = 0;
             this.lblStudents.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblStudents.Location = new System.Drawing.Point(67, 15);
+            this.lblStudents.Location = new System.Drawing.Point(67, 18);
             this.lblStudents.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
             this.lblStudents.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblStudents.Name = "lblStudents";
@@ -676,7 +689,7 @@
             this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialCard2.Name = "materialCard2";
             this.materialCard2.Padding = new System.Windows.Forms.Padding(10);
-            this.materialCard2.Size = new System.Drawing.Size(220, 110);
+            this.materialCard2.Size = new System.Drawing.Size(220, 120);
             this.materialCard2.TabIndex = 5;
             // 
             // tableLayoutPanel11
@@ -693,7 +706,7 @@
             this.tableLayoutPanel11.RowCount = 2;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.16667F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.83333F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(200, 90);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(200, 100);
             this.tableLayoutPanel11.TabIndex = 0;
             // 
             // materialLabel8
@@ -702,7 +715,7 @@
             this.materialLabel8.AutoSize = true;
             this.materialLabel8.Depth = 0;
             this.materialLabel8.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel8.Location = new System.Drawing.Point(10, 8);
+            this.materialLabel8.Location = new System.Drawing.Point(10, 10);
             this.materialLabel8.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
@@ -718,11 +731,11 @@
             this.tableLayoutPanel12.Controls.Add(this.pictureBox3, 0, 0);
             this.tableLayoutPanel12.Controls.Add(this.lblClasses, 1, 0);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 38);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 42);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 1;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(194, 49);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(194, 55);
             this.tableLayoutPanel12.TabIndex = 2;
             // 
             // pictureBox3
@@ -732,7 +745,7 @@
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(3, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(56, 43);
+            this.pictureBox3.Size = new System.Drawing.Size(56, 49);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -743,7 +756,7 @@
             this.lblClasses.AutoSize = true;
             this.lblClasses.Depth = 0;
             this.lblClasses.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.lblClasses.Location = new System.Drawing.Point(67, 15);
+            this.lblClasses.Location = new System.Drawing.Point(67, 18);
             this.lblClasses.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
             this.lblClasses.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblClasses.Name = "lblClasses";
@@ -756,11 +769,91 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 24.75F);
-            this.label1.Location = new System.Drawing.Point(3, 11);
+            this.label1.Location = new System.Drawing.Point(25, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(25, 0, 3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(328, 37);
             this.label1.TabIndex = 2;
             this.label1.Text = "Welcome Headmaster!";
+            // 
+            // Classes
+            // 
+            this.Classes.Controls.Add(this.tableLayoutPanel13);
+            this.Classes.ImageKey = "icons8-school-100.png";
+            this.Classes.Location = new System.Drawing.Point(4, 23);
+            this.Classes.Name = "Classes";
+            this.Classes.Size = new System.Drawing.Size(816, 391);
+            this.Classes.TabIndex = 5;
+            this.Classes.Text = "Classes";
+            this.Classes.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel13
+            // 
+            this.tableLayoutPanel13.ColumnCount = 1;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel13.Controls.Add(this.panel5, 0, 0);
+            this.tableLayoutPanel13.Controls.Add(this.ClassesGV, 0, 1);
+            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 2;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.0665F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.9335F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(816, 391);
+            this.tableLayoutPanel13.TabIndex = 4;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btnAddNewClass);
+            this.panel5.Controls.Add(this.materialLabel7);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(810, 49);
+            this.panel5.TabIndex = 0;
+            // 
+            // btnAddNewClass
+            // 
+            this.btnAddNewClass.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnAddNewClass.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAddNewClass.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnAddNewClass.Depth = 0;
+            this.btnAddNewClass.HighEmphasis = true;
+            this.btnAddNewClass.Icon = null;
+            this.btnAddNewClass.Location = new System.Drawing.Point(694, 7);
+            this.btnAddNewClass.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAddNewClass.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAddNewClass.Name = "btnAddNewClass";
+            this.btnAddNewClass.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnAddNewClass.Size = new System.Drawing.Size(102, 36);
+            this.btnAddNewClass.TabIndex = 2;
+            this.btnAddNewClass.Text = "New Class";
+            this.btnAddNewClass.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnAddNewClass.UseAccentColor = false;
+            this.btnAddNewClass.UseVisualStyleBackColor = true;
+            this.btnAddNewClass.Click += new System.EventHandler(this.btnAddNewClass_Click);
+            // 
+            // materialLabel7
+            // 
+            this.materialLabel7.AutoSize = true;
+            this.materialLabel7.Depth = 0;
+            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel7.Location = new System.Drawing.Point(21, 17);
+            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel7.Name = "materialLabel7";
+            this.materialLabel7.Size = new System.Drawing.Size(212, 19);
+            this.materialLabel7.TabIndex = 1;
+            this.materialLabel7.Text = "Home > Classes Management";
+            // 
+            // ClassesGV
+            // 
+            this.ClassesGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ClassesGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ClassesGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClassesGV.Location = new System.Drawing.Point(3, 58);
+            this.ClassesGV.Name = "ClassesGV";
+            this.ClassesGV.Size = new System.Drawing.Size(810, 330);
+            this.ClassesGV.TabIndex = 1;
             // 
             // AdminHome
             // 
@@ -816,6 +909,11 @@
             this.tableLayoutPanel12.ResumeLayout(false);
             this.tableLayoutPanel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.Classes.ResumeLayout(false);
+            this.tableLayoutPanel13.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ClassesGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -869,5 +967,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialLabel lblTeachers;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage Classes;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.Panel panel5;
+        private MaterialSkin.Controls.MaterialButton btnAddNewClass;
+        private MaterialSkin.Controls.MaterialLabel materialLabel7;
+        private System.Windows.Forms.DataGridView ClassesGV;
     }
 }

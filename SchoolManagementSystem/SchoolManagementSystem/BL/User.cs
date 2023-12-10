@@ -33,6 +33,7 @@ namespace SchoolManagementSystem.BL
             CreatedAt = createdAt;
             UpdatedAt = updatedAt;
             Active = active;
-        }   
+        }
+        public User() { }
     }
 }

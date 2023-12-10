@@ -65,6 +65,12 @@
     <Compile Include="DL\StudentDL.cs" />
     <Compile Include="DL\TeacherDL.cs" />
     <Compile Include="DL\UserDL.cs" />
+    <Compile Include="UI\AddNewClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AddNewClass.Designer.cs">
+      <DependentUpon>AddNewClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\AddNewCourse.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     <Compile Include="UI\UCSignUp.Designer.cs">
       <DependentUpon>UCSignUp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\AddNewClass.resx">
+      <DependentUpon>AddNewClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\AddNewCourse.resx">
       <DependentUpon>AddNewCourse.cs</DependentUpon>
     </EmbeddedResource>
