@@ -69,13 +69,13 @@
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblStudents = new MaterialSkin.Controls.MaterialLabel();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
+            this.lblClasses = new MaterialSkin.Controls.MaterialLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.materialTabControl1.SuspendLayout();
             this.Home.SuspendLayout();
@@ -128,6 +128,7 @@
             this.materialTabControl1.SelectedIndex = 0;
             this.materialTabControl1.Size = new System.Drawing.Size(824, 418);
             this.materialTabControl1.TabIndex = 0;
+            this.materialTabControl1.TabIndexChanged += new System.EventHandler(this.materialTabControl1_TabIndexChanged);
             // 
             // Home
             // 
@@ -570,9 +571,9 @@
             this.lblTeachers.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
             this.lblTeachers.MouseState = MaterialSkin.MouseState.HOVER;
             this.lblTeachers.Name = "lblTeachers";
-            this.lblTeachers.Size = new System.Drawing.Size(10, 19);
+            this.lblTeachers.Size = new System.Drawing.Size(19, 19);
             this.lblTeachers.TabIndex = 2;
-            this.lblTeachers.Text = "0";
+            this.lblTeachers.Text = "15";
             // 
             // materialCard1
             // 
@@ -627,7 +628,7 @@
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.24299F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.75701F));
             this.tableLayoutPanel8.Controls.Add(this.pictureBox2, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.materialLabel7, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.lblStudents, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 38);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -648,19 +649,19 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // materialLabel7
+            // lblStudents
             // 
-            this.materialLabel7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.materialLabel7.AutoSize = true;
-            this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel7.Location = new System.Drawing.Point(67, 15);
-            this.materialLabel7.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
-            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(10, 19);
-            this.materialLabel7.TabIndex = 2;
-            this.materialLabel7.Text = "0";
+            this.lblStudents.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblStudents.AutoSize = true;
+            this.lblStudents.Depth = 0;
+            this.lblStudents.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblStudents.Location = new System.Drawing.Point(67, 15);
+            this.lblStudents.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.lblStudents.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblStudents.Name = "lblStudents";
+            this.lblStudents.Size = new System.Drawing.Size(28, 19);
+            this.lblStudents.TabIndex = 2;
+            this.lblStudents.Text = "278";
             // 
             // materialCard2
             // 
@@ -705,9 +706,9 @@
             this.materialLabel8.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
-            this.materialLabel8.Size = new System.Drawing.Size(56, 19);
+            this.materialLabel8.Size = new System.Drawing.Size(58, 19);
             this.materialLabel8.TabIndex = 1;
-            this.materialLabel8.Text = "Classes";
+            this.materialLabel8.Text = "Courses";
             // 
             // tableLayoutPanel12
             // 
@@ -715,7 +716,7 @@
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.24299F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.75701F));
             this.tableLayoutPanel12.Controls.Add(this.pictureBox3, 0, 0);
-            this.tableLayoutPanel12.Controls.Add(this.materialLabel9, 1, 0);
+            this.tableLayoutPanel12.Controls.Add(this.lblClasses, 1, 0);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 38);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
@@ -736,19 +737,19 @@
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // materialLabel9
+            // lblClasses
             // 
-            this.materialLabel9.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.materialLabel9.AutoSize = true;
-            this.materialLabel9.Depth = 0;
-            this.materialLabel9.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel9.Location = new System.Drawing.Point(67, 15);
-            this.materialLabel9.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
-            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel9.Name = "materialLabel9";
-            this.materialLabel9.Size = new System.Drawing.Size(10, 19);
-            this.materialLabel9.TabIndex = 2;
-            this.materialLabel9.Text = "0";
+            this.lblClasses.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblClasses.AutoSize = true;
+            this.lblClasses.Depth = 0;
+            this.lblClasses.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lblClasses.Location = new System.Drawing.Point(67, 15);
+            this.lblClasses.Margin = new System.Windows.Forms.Padding(5, 0, 3, 0);
+            this.lblClasses.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lblClasses.Name = "lblClasses";
+            this.lblClasses.Size = new System.Drawing.Size(19, 19);
+            this.lblClasses.TabIndex = 2;
+            this.lblClasses.Text = "10";
             // 
             // label1
             // 
@@ -757,9 +758,9 @@
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 24.75F);
             this.label1.Location = new System.Drawing.Point(3, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(312, 37);
+            this.label1.Size = new System.Drawing.Size(328, 37);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Welcom Headmaster!";
+            this.label1.Text = "Welcome Headmaster!";
             // 
             // AdminHome
             // 
@@ -854,13 +855,13 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private MaterialSkin.Controls.MaterialLabel materialLabel9;
+        private MaterialSkin.Controls.MaterialLabel lblClasses;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private MaterialSkin.Controls.MaterialLabel materialLabel7;
+        private MaterialSkin.Controls.MaterialLabel lblStudents;
         private MaterialSkin.Controls.MaterialCard materialCard4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;

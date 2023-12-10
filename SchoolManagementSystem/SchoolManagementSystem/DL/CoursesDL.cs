@@ -80,6 +80,19 @@ namespace SchoolManagementSystem.DL
             }
 
         }
+        public static int getTotalCourses()
+        {
+            using (var connection = new SqlConnection(DBConnection.ConnectionStr))
+            {
+                connection.Open();
+
+                using (var command = new SqlCommand($"SELECT COUNT(*) FROM courses", connection))
+                {
+                    return (int)command.ExecuteScalar();
+                }
+            }
+        }
+
 
     }
 }

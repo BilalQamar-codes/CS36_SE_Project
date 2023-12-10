@@ -145,5 +145,16 @@ namespace SchoolManagementSystem.UI
             anc.ShowDialog();
             bindCoursesData();
         }
+
+        private void materialTabControl1_TabIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+        public void loadDashboardValues()
+        {
+            lblTeachers.Text = TeacherDL.getTotalTeachers().ToString();
+            lblStudents.Text = StudentDL.getTotalStudents().ToString();
+            lblClasses.Text = CoursesDL.getTotalCourses().ToString();
+        }
     }
 }

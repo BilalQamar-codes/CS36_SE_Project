@@ -81,5 +81,17 @@ namespace SchoolManagementSystem.UI
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        public static int getTotalTeachers()
+        {
+            using (var connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (var command = new SqlCommand($"SELECT COUNT(*) FROM {tableName}", connection))
+                {
+                    return (int)command.ExecuteScalar();
+                }
+            }
+        }
     }
 }

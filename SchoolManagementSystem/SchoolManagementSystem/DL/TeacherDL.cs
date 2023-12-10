@@ -77,6 +77,18 @@ namespace SchoolManagementSystem.DL
             }
             
         }
+        public static int getTotalTeachers()
+        {
+            using (var connection = new SqlConnection(DBConnection.ConnectionStr))
+            {
+                connection.Open();
+
+                using (var command = new SqlCommand($"SELECT COUNT(*) FROM teachers", connection))
+                {
+                    return (int)command.ExecuteScalar();
+                }
+            }
+        }
 
     }
 }
