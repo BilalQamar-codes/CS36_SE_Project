@@ -1,4 +1,12 @@
-﻿using SchoolManagementSystem.BL;
+﻿/*
+    UserDL manages user-related database operations:
+    - addUserIntoDatabase: Adds a new user to the database.
+    - LoginUser: Authenticates user login credentials.
+    - getAllUserss: Retrieves all user records.
+
+    Implements user authentication, user addition, and retrieval functionalities.
+*/
+using SchoolManagementSystem.BL;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;

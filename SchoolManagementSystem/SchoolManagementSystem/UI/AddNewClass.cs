@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+    AddNewClass UI form allows users to add new classes.
+    It captures class details and saves them to the database.
+    Handles user input validation and error logging.
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

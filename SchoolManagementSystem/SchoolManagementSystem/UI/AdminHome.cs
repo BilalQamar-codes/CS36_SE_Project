@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+    AdminHome UI form manages the administrative dashboard and displays various data grids.
+    It handles the display and management of teachers, students, classes, courses, and users.
+    Implements data binding for grids and styling configurations for visual elements.
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

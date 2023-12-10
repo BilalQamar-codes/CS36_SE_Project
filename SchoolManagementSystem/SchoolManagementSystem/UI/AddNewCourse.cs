@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+    AddNewCourse UI form facilitates the addition of new courses.
+    It allows users to input course details and assigns teachers and classes to the courses.
+    Handles database interactions for adding new courses and populating teacher and class dropdowns.
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -121,6 +126,16 @@ namespace SchoolManagementSystem.UI
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 LogsDL.LogException(ex);
             }
+        }
+
+        private void txtCourseName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCourseDescription_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

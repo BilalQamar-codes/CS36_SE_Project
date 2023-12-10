@@ -1,4 +1,12 @@
-﻿using SchoolManagementSystem.BL;
+﻿/*
+    TeacherDL manages database operations related to teachers:
+    - addTeacherIntoDatabase: Adds a new teacher's information.
+    - getAllTeachers: Retrieves all teacher records.
+    - getTotalTeachers: Counts total teachers.
+
+    Implements error logging and database connection management.
+*/
+using SchoolManagementSystem.BL;
 using System;
 using System.Collections.Generic;
 using System.Data;

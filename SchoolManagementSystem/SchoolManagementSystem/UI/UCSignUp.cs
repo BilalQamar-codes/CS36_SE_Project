@@ -1,4 +1,8 @@
-﻿using SchoolManagementSystem.BL;
+﻿/*
+    UCSignUp UserControl manages the login functionality 
+    allowing users to authenticate and access the School Management System.
+*/
+using SchoolManagementSystem.BL;
 using SchoolManagementSystem.DL;
 using SchoolManagementSystem.UI;
 using System;

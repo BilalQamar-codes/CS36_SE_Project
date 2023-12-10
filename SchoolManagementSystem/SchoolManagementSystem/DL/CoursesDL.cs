@@ -1,4 +1,14 @@
-﻿using SchoolManagementSystem.BL;
+﻿// This file defines the data access layer (DAL) logic for managing courses
+// in the School Management System.
+// It provides methods to:
+// * Add a new course.
+// * Retrieve all courses.
+// * Get the total number of courses.
+// The file contains three methods:
+// * AddCourseIntoDatabase(Course course)
+// * getAllCourses()
+// * getTotalCourses()
+using SchoolManagementSystem.BL;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -70,15 +80,16 @@ namespace SchoolManagementSystem.DL
                                 SELECT
                                     c.course_id,
                                     c.name AS course_name,
+									cl.name AS [Class Name],
                                     t.first_name + ' ' + t.last_name AS teacher_name,
                                     c.description,
                                     c.teacher_id,
-                                    c.created_at,
-                                    c.updated_at,
-                                    c.active
+                                    c.CreatedAt,
+                                    c.UpdatedAt,
+                                    c.Active									
                                 FROM courses AS c
-                                INNER JOIN teachers AS t ON c.teacher_id = t.teacher_id;
-                                ";
+                                INNER JOIN classes AS cl ON c.class_id = cl.class_id
+                                INNER JOIN teachers AS t ON c.teacher_id = t.teacher_id;";
                     SqlCommand cmd = new SqlCommand(sql, connection);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();

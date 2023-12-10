@@ -1,4 +1,12 @@
-﻿using System;
+﻿// This file defines the data access layer (DAL) logic for managing classes
+// in the School Management System.
+// It provides methods to:
+// * Retrieve all classes.
+// * Add a new class.
+// The file contain two methods:
+// * getAllClasses()
+// * AddClassIntoDatabase(Class classObject)
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;

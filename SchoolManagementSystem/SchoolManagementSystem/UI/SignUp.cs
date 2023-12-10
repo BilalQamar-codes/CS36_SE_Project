@@ -1,4 +1,8 @@
-﻿using SchoolManagementSystem.BL;
+﻿/*
+    SignUp UserControl handles the user interface for registering new users,
+    particularly admins, within the School Management System.
+*/
+using SchoolManagementSystem.BL;
 using SchoolManagementSystem.DL;
 using System;
 using System.Collections.Generic;

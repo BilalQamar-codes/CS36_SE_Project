@@ -45,7 +45,6 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.UsersGV = new System.Windows.Forms.DataGridView();
             this.Students = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -83,6 +82,11 @@
             this.btnAddNewClass = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.ClassesGV = new System.Windows.Forms.DataGridView();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.UsersGV = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.materialTabControl1.SuspendLayout();
             this.Home.SuspendLayout();
             this.Teachers.SuspendLayout();
@@ -94,7 +98,6 @@
             this.Users.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UsersGV)).BeginInit();
             this.Students.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -119,6 +122,7 @@
             this.tableLayoutPanel13.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClassesGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsersGV)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -279,6 +283,9 @@
             // 
             this.TeachersGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TeachersGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TeachersGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Edit,
+            this.Delete});
             this.TeachersGV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TeachersGV.Location = new System.Drawing.Point(3, 55);
             this.TeachersGV.Name = "TeachersGV";
@@ -300,8 +307,8 @@
             // 
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.UsersGV, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -331,16 +338,6 @@
             this.materialLabel2.Size = new System.Drawing.Size(98, 19);
             this.materialLabel2.TabIndex = 1;
             this.materialLabel2.Text = "Home > Users";
-            // 
-            // UsersGV
-            // 
-            this.UsersGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.UsersGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UsersGV.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UsersGV.Location = new System.Drawing.Point(3, 55);
-            this.UsersGV.Name = "UsersGV";
-            this.UsersGV.Size = new System.Drawing.Size(810, 333);
-            this.UsersGV.TabIndex = 1;
             // 
             // Students
             // 
@@ -855,6 +852,43 @@
             this.ClassesGV.Size = new System.Drawing.Size(810, 330);
             this.ClassesGV.TabIndex = 1;
             // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "Edit";
+            this.Edit.Image = ((System.Drawing.Image)(resources.GetObject("Edit.Image")));
+            this.Edit.Name = "Edit";
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete";
+            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
+            this.Delete.Name = "Delete";
+            // 
+            // UsersGV
+            // 
+            this.UsersGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.UsersGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UsersGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewImageColumn1,
+            this.dataGridViewImageColumn2});
+            this.UsersGV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.UsersGV.Location = new System.Drawing.Point(3, 55);
+            this.UsersGV.Name = "UsersGV";
+            this.UsersGV.Size = new System.Drawing.Size(810, 333);
+            this.UsersGV.TabIndex = 2;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Edit";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Delete";
+            this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            // 
             // AdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -880,7 +914,6 @@
             this.tableLayoutPanel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.UsersGV)).EndInit();
             this.Students.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -914,6 +947,7 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClassesGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsersGV)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -935,7 +969,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Panel panel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private System.Windows.Forms.DataGridView UsersGV;
         private System.Windows.Forms.TabPage Students;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Panel panel3;
@@ -973,5 +1006,10 @@
         private MaterialSkin.Controls.MaterialButton btnAddNewClass;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private System.Windows.Forms.DataGridView ClassesGV;
+        private System.Windows.Forms.DataGridViewImageColumn Edit;
+        private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private System.Windows.Forms.DataGridView UsersGV;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
     }
 }

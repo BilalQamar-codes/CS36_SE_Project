@@ -1,4 +1,8 @@
-﻿using System;
+﻿// SchoolManagementSystem - SignUpForm.cs
+// This file contains the implementation of the SignUpForm class,
+// which represents the user interface for signing up or logging into
+// the school management system. It utilizes MaterialSkin for its UI elements.
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,10 +14,6 @@ using System.Windows.Forms;
 using MaterialSkin;
 using MaterialSkin.Controls;
 
-// SchoolManagementSystem - SignUpForm.cs
-// This file contains the implementation of the SignUpForm class,
-// which represents the user interface for signing up or logging into
-// the school management system. It utilizes MaterialSkin for its UI elements.
 
 namespace SchoolManagementSystem
 {

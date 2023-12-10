@@ -20,3 +20,4 @@ E:\5th Semester\SE Lab\SE Project\SchoolManagementSystem\SchoolManagementSystem\
 E:\5th Semester\SE Lab\SE Project\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.UI.AddNewStudent.resources
 E:\5th Semester\SE Lab\SE Project\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.UI.AddNewCourse.resources
 E:\5th Semester\SE Lab\SE Project\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.UI.AddNewClass.resources
+E:\5th Semester\SE Lab\SE Project\SchoolManagementSystem\SchoolManagementSystem\obj\Debug\SchoolManagementSystem.UI.TeacherHome.resources

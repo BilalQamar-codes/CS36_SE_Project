@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+    AddNewStudent UI form allows the addition of new student records.
+    It captures student details such as name, date of birth, gender, contact information, and address.
+    Handles user input validation and database interactions for adding new students.
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

@@ -1,4 +1,10 @@
-﻿using SchoolManagementSystem.BL;
+﻿
+//StudentDL manages student-related database operations:
+//- AddStudentIntoDatabase: Adds new student records.
+//- getAllStudents: Retrieves all student records.
+//  - getTotalStudents: Counts total students.
+
+using SchoolManagementSystem.BL;
 using System;
 using System.Collections.Generic;
 using System.Data;

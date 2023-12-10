@@ -64,7 +64,7 @@
             this.txtCourseName.BackColor = System.Drawing.SystemColors.MenuText;
             this.txtCourseName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCourseName.Depth = 0;
-            this.txtCourseName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtCourseName.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtCourseName.ForeColor = System.Drawing.SystemColors.Window;
             this.txtCourseName.Hint = "Enter Course Name";
             this.txtCourseName.LeadingIcon = null;
@@ -77,6 +77,7 @@
             this.txtCourseName.TabIndex = 7;
             this.txtCourseName.Text = "";
             this.txtCourseName.TrailingIcon = null;
+            this.txtCourseName.TextChanged += new System.EventHandler(this.txtCourseName_TextChanged);
             // 
             // txtCourseDescription
             // 
@@ -103,6 +104,7 @@
             this.txtCourseDescription.TabStop = false;
             this.txtCourseDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtCourseDescription.UseSystemPasswordChar = false;
+            this.txtCourseDescription.Click += new System.EventHandler(this.txtCourseDescription_Click);
             // 
             // btnSave
             // 

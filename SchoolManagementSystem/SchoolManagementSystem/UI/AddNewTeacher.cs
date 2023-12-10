@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+    AddNewTeacher UI form facilitates the addition of new teachers.
+    It captures teacher details such as name, date of birth, gender, contact information, and qualifications.
+    Handles user input validation and database interactions for adding new teachers and users.
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

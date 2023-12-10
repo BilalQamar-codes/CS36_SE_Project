@@ -1,4 +1,9 @@
-﻿using System;
+﻿
+//LogsDL class logs exceptions to a 'logs' database table. 
+//The LogException method captures exception details and stores them using an SQL INSERT statement.
+//To use this functionality, call the static LogException method and pass an Exception object to log 
+//relevant details to the connected database for further analysis and debugging purposes.
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
